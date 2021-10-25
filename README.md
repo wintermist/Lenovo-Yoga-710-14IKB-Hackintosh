@@ -10,6 +10,10 @@ This repository is meant to serve as rough documentation of the steps I followed
 
 - - -
 
+![screenshot.png](https://raw.githubusercontent.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/main/Resources/screenshot.png)
+
+- - -
+
 # Configuration
 | Specification    | Details                                                                                                           |
 |------------------|-------------------------------------------------------------------------------------------------------------------|
