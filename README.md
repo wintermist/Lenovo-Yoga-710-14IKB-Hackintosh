@@ -3,16 +3,10 @@
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.7.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
-- - -
-
 # Disclaimer
 This repository is meant to serve as rough documentation of the steps I followed to turn my Yoga-710-14IKB into a working Hackintosh. The documentation and the files listed here should be used as a reference only. If you choose to use the documentation and/or the files for your personal use, you are allowed to do so on your responsibility. Under no circumstances will I be held responsible for any data loss or bricked device or other disasters that might strike your PC. Also, create your own SMBIOS. I've removed SMBIOS details from the __config.plist__.
 
-- - -
-
 ![screenshot.png](https://raw.githubusercontent.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/main/Resources/screenshot.png)
-
-- - -
 
 # Configuration
 | Specification    | Details                                                                                                           |
@@ -31,13 +25,9 @@ This repository is meant to serve as rough documentation of the steps I followed
 
 **NOTE:** When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. Replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
 
-- - -
-
 # Important
 - This EFI is for **macOS Monterey only**. You have to replace _BlueToolFixup.kext_ with _BrcmBluetoothInjector.kext_ if you want to boot Big Sur.
 - XhciPortLimit is broken in Big Sur 11.3 and above, so you can't boot Big Sur (11.3+) and Monterey without properly configured USBMap.kext. You must properly map your USB ports using an older macOS (Catalina, for example) before you attempt booting Big Sur 11.3+.
-
-- - -
 
 # Working
 - Graphics (with QE/CI)
@@ -64,8 +54,6 @@ This repository is meant to serve as rough documentation of the steps I followed
 
 #  Untested
 - Anything that requires owning a real, Apple device i.e., Handoff, AirDrop etc. 
-
-- - -
 
 # BIOS/UEFI Settings
 An important element of having power management in Hackintosh is disabling [CFG-Lock](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#checking-if-your-firmware-supports-cfg-lock-unlocking) in BIOS. The problem is most laptop BIOS keeps this setting hidden from users. Yoga 710 is no different, so you can't find this option in the BIOS. But, fortunately, there is a way to unlock the __Advanced__ setting in our BIOS without invasive procedures. We will use a bunch of key combinations to get access to the Advanced settings.
@@ -143,8 +131,6 @@ Now you can configure your BIOS freely. [Guide](https://dortania.github.io/OpenC
 
 __Note:__ Don't use CPUFriend.kext during installation.
 
-- - -
-
 
 # Preparation
 I can't stress enough how important it is to take note of the hardware and device/vendor ids before you even attempt to proceed further. [Guide](https://dortania.github.io/OpenCore-Install-Guide/find-hardware.html#finding-hardware-using-windows) 
@@ -153,14 +139,10 @@ Use [SSDTTime](https://github.com/corpnewt/SSDTTime) to dump your DSDT and SSDTs
 
 If you plan on installing Monterey or Big Sur 11.3+, make sure that you install a prior version of macOS and create your [USBMap.kext](https://github.com/corpnewt/USBMap). You may try the USBMap.kext available in this repository and place it inside __EFI__ > __OC__ > __Kexts__ folder.
 
-- - -
-
 # Installation
 For installation, refer to _[Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/)_. Ideally, you should read the whole guide thoroughly. Once you are done, lots of things make sense.
 
 In OpenCore, some kexts are required to be loaded before some other kext(s) to function properly. So make sure that you understand the kext loading order. You can also refer to the __config.plist__ available in this repository to see the order in which they must be loaded.
-
-- - -
 
 # Useful Tips
 1. Pay attention to VoodooRMI kexts loading order. There are redundant kexts that must be disabled. [ProperTree](https://github.com/corpnewt/ProperTree) does this automatically when you take OC Snapshot, but you should verify it manually.
@@ -173,8 +155,6 @@ In OpenCore, some kexts are required to be loaded before some other kext(s) to f
     - SSDT-HPET.aml
     - SSDT-PLUG.aml
 7. __Using CPUFriend.kext (OPTIONAL)__ This should be the last thing in your Hackintosh building process, and it is optional. [Guide](https://www.olarila.com/topic/5693-guide-ssdt-with-pikes-pm-script-and-use-with-cpufriend/) (No need to download the Data.zip at Olarila. That zip contains required configurations for Coffee Lake users. And you should opt for the kext version i.e., CPUFriendDataProvider.kext)
-
-- - -
 
 # Credits
 - [Apple](https://www.apple.com/) for macOS.
