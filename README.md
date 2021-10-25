@@ -165,7 +165,7 @@ In OpenCore, some kexts are required to be loaded before some other kext(s) to f
 - [CorpNewt](https://github.com/corpnewt) for USBMap.kext, GenSMBIOS, SSDTTime, MountEFI and ProperTree.
 - [1Revenger1](https://github.com/1Revenger1) for ECEnabler.kext and other contributions.
 - [alexandred](https://github.com/alexandred) and other VoodooI2C team for VoodooI2C.
-- [xlivans](https://github.com/xlivans) for the original guide on unlocking the Advanced menu in the BIOS.
+- [daliansky](https://github.com/daliansky) for the original guide on unlocking the Advanced menu in the BIOS.
 - [Headkaze](https://github.com/headkaze) for Hackintool.
 - [Piker-Alpha](https://github.com/Piker-Alpha) for ssdtPRGen.sh.
 - [RehabMan](https://bitbucket.org/RehabMan/) for awesome guides and tools.
