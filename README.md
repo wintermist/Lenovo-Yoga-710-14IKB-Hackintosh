@@ -1,6 +1,6 @@
 # Lenovo Yoga-710-14IKB Hackintosh
-[![macOS](https://img.shields.io/badge/Monterey-12.0.1%20RC2%2021A559-blue.svg)](https://www.apple.com/macos) 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS](https://img.shields.io/badge/Monterey-12.0.1%2021A559-blue.svg)](https://www.apple.com/macos) 
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
 # Disclaimer
@@ -50,7 +50,7 @@ This repository is meant to serve as rough documentation of the steps I followed
 
 # Not Working
 - Physical Trackpad buttons
-- DRM (Currently unsupported on Big Sur and Monterey)
+- DRM (iGPU only systems are unsupported on Big Sur and Monterey)
 
 #  Untested
 - Anything that requires owning a real, Apple device i.e., Handoff, AirDrop etc. 
@@ -90,7 +90,7 @@ Now you can configure your BIOS freely. [Guide](https://dortania.github.io/OpenC
 - VoodooPS2Controller.kext
 
 ## [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup/releases/)
-- AirportBrcmFixup.kext
+- AirportBrcmFixup.kext (Delete AirPortBrcm4360_Injector.kext or disable using config.plist)
 
 ## [BrcmPatchRam](https://github.com/acidanthera/BrcmPatchRAM/releases/)
 - BlueToolFixup.kext (with _disable vendor check_ patch).
