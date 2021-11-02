@@ -50,7 +50,7 @@ This repository is meant to serve as rough documentation of the steps I followed
 
 # Not Working
 - Physical Trackpad buttons
-- DRM (iGPU only systems are unsupported on Big Sur and Monterey)
+- DRM (iGPU only systems are mostly unsupported.)
 
 #  Untested
 - Anything that requires owning a real, Apple device i.e., Handoff, AirDrop etc. 
@@ -93,7 +93,7 @@ Now you can configure your BIOS freely. [Guide](https://dortania.github.io/OpenC
 - AirportBrcmFixup.kext (Delete AirPortBrcm4360_Injector.kext or disable using config.plist)
 
 ## [BrcmPatchRam](https://github.com/acidanthera/BrcmPatchRAM/releases/)
-- BlueToolFixup.kext (with _disable vendor check_ patch).
+- BlueToolFixup.kext
 - BrcmFirmwareData.kext
 - BrcmPatchRAM3.kext
 
@@ -149,7 +149,7 @@ In OpenCore, some kexts are required to be loaded before some other kext(s) to f
 2. To increase VRAM and get HDMI to work properly, you must patch the framebuffer using [Hackintool](https://github.com/headkaze/Hackintool). [Guide](https://www.tonymacx86.com/threads/guide-general-framebuffer-patching-guide-hdmi-black-screen-problem.269149/#Preparation)
 3. I2C devices must be GPIO pinned for VoodooI2C to work properly. [Guide](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html#checking-gpi0)
 4. The touchscreen works only after waking up from sleep (it has been this way since High Sierra). To get it working, you need Windows patches (which is often discouraged) using __SSDT-XOSI.aml__, and you also need to add XOSI renames in your config.plist. Since I do not use the touchscreen, I have not included the files in this repository. [Guide](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html#osi-to-xosi)
-5. Bluetooth situation does not look too good in macOS Monterey. You have to use BlueToolFixup.kext with _["disable vendor check"](https://github.com/acidanthera/BrcmPatchRAM/pull/16)_ patch (use the one in this repository). It currently shows up as _THIRD_PARTY_DONGLE_. You can read up about current limitations [here](https://github.com/acidanthera/bugtracker/issues/1821).
+5. Bluetooth situation does not look too good in macOS Monterey. You have to use BlueToolFixup.kext. Currently, it shows up as _THIRD_PARTY_DONGLE_. You can read up about current limitations [here](https://github.com/acidanthera/bugtracker/issues/1821).
 6. Using prebuilt SSDTs is fine, but try to create SSDTs manually. It teaches you a lot in the process. SSDTTime generated SSDTs that I ended up using are–
     - SSDT-EC.aml
     - SSDT-HPET.aml
