@@ -36,13 +36,13 @@ This repository is meant to serve as rough documentation of the steps I followed
 - Audio and Brightness **Fn** keys
 - Brightness
 - Keyboard
-- Trackpad (full gestures support)
+- Trackpad (full gestures support.)
 - Battery Status
 - Audio
 - Siri
 - WiFi
-- Bluetooth (a bit finicky because of changes in Monterey)
-- HDMI output with Audio
+- Bluetooth
+- HDMI output (along with audio)
 - Touchscreen (with a caveat)
 - Webcam
 - iServices (iMessage, FaceTime, AppStore etc.)
@@ -50,10 +50,10 @@ This repository is meant to serve as rough documentation of the steps I followed
 
 # Not Working
 - Physical Trackpad buttons
-- DRM (iGPU only systems are mostly unsupported.)
+- DRM (iGPU only systems are [unsupported](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md).)
 
 #  Untested
-- Anything that requires owning a real, Apple device i.e., Handoff, AirDrop etc. 
+- Anything that requires owning a real Apple device i.e., Handoff, AirDrop etc. 
 
 # BIOS/UEFI Settings
 An important element of having power management in Hackintosh is disabling [CFG-Lock](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#checking-if-your-firmware-supports-cfg-lock-unlocking) in BIOS. The problem is most laptop BIOS keeps this setting hidden from users. Yoga 710 is no different, so you can't find this option in the BIOS. But, fortunately, there is a way to unlock the __Advanced__ setting in our BIOS without invasive procedures. We will use a bunch of key combinations to get access to the Advanced settings.
@@ -67,7 +67,10 @@ An important element of having power management in Hackintosh is disabling [CFG-
     * `F6` → `6` → `Y` → `H` → `N`
 * Now press Power Button → Press Fn+F2 to enter BIOS, __Advanced__ tab should be visible.
 
-Now you can configure your BIOS freely. [Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)
+Now you can configure your BIOS freely. [Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.html#intel-bios-settings)
+
+To disable CFG-Lock:
+* `Advanced` → `Power & Performance` → `CPU - Power Management Control` → `CPU Lock Configuration` → `CFG Lock` → `Disabled`
 
 # Required Drivers/Kexts
 
@@ -137,7 +140,7 @@ I can't stress enough how important it is to take note of the hardware and devic
 
 Use [SSDTTime](https://github.com/corpnewt/SSDTTime) to dump your DSDT and SSDTs in Linux (or Windows). Make sure to take a copy of those in an external drive. While you will not use the whole DSDT with OpenCore, you may have to refer to it for manually patching other SSDTs. You will also need a 16GB+ USB flash drive to make the bootable USB installer. I will assume that you already have access to a mac or a Hackintosh machine.
 
-If you plan on installing Monterey or Big Sur 11.3+, make sure that you install a prior version of macOS and create your [USBMap.kext](https://github.com/corpnewt/USBMap). You may try the USBMap.kext available in this repository and place it inside __EFI__ > __OC__ > __Kexts__ folder.
+If you plan on installing Monterey or Big Sur 11.3+, make sure that you install a prior version of macOS and create your [USBMap.kext](https://github.com/corpnewt/USBMap). You may try the USBMap.kext available in this repository and place it inside __EFI__ > __OC__ > __Kexts__ folder. Alternatively, if you are still on windows, you may give _[this](https://github.com/USBToolBox/tool)_ a go.
 
 # Installation
 For installation, refer to _[Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/)_. Ideally, you should read the whole guide thoroughly. Once you are done, lots of things make sense.
