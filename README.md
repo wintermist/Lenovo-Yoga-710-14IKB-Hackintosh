@@ -1,6 +1,6 @@
 # Lenovo Yoga-710-14IKB Hackintosh
 [![macOS](https://img.shields.io/badge/Monterey-12.0.1%2021A559-blue.svg)](https://www.apple.com/macos) 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
 # Disclaimer
