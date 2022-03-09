@@ -1,10 +1,10 @@
 # Lenovo Yoga-710-14IKB Hackintosh
-[![macOS](https://img.shields.io/badge/Monterey-12.2%2021D49-blue.svg)](https://www.apple.com/macos) 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.8-red.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS](https://img.shields.io/badge/Monterey-12.2.1%2021D62-blue.svg)](https://www.apple.com/macos) 
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.9-success.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
 # Disclaimer
-This repository is meant to serve as rough documentation of the steps I followed to turn my Yoga-710-14IKB into a working Hackintosh. The documentation and the files listed here should be used as a reference only. If you choose to use the documentation and/or the files for your personal use, you are allowed to do so on your responsibility. Under no circumstances will I be held responsible for any data loss or bricked device or other disasters that might strike your PC. Also, create your own SMBIOS. I've removed SMBIOS details from the __config.plist__.
+This repository is meant to serve as rough documentation of the steps I followed to turn my Yoga-710-14IKB into a working Hackintosh. The documentation and the files listed here should be used as a reference only. If you choose to use the documentation and/or the files for your personal use, you are allowed to do so on your responsibility. Under no circumstances will I be held responsible for any data loss or bricked device or other disasters that might strike your PC. Also, create your own SMBIOS. I've removed my SMBIOS details from the __config.plist__.
 
 ![screenshot.png](https://raw.githubusercontent.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/main/Resources/screenshot.png)
 
