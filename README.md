@@ -1,10 +1,14 @@
 # Lenovo Yoga-710-14IKB Hackintosh
-[![macOS](https://img.shields.io/badge/Monterey-12.5.1%2021G83-blue.svg)](https://www.apple.com/macos) 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.4-success.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS](https://img.shields.io/badge/Ventura-13.0%2022A380-FFFF00.svg)](https://www.apple.com/macos) 
+[![macOS](https://img.shields.io/badge/Monterey-12.6%2021G115-blue.svg)](https://www.apple.com/macos) 
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.5-success.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
 # Disclaimer
 This repository is meant to serve as rough documentation of the steps I followed to turn my Yoga-710-14IKB into a working Hackintosh. The documentation and the files listed here should be used as a reference only. If you choose to use the documentation and/or the files for your personal use, you are allowed to do so on your responsibility. Under no circumstances will I be held responsible for any data loss or bricked device or other disasters that might strike your PC. Also, create your own SMBIOS. I've removed my SMBIOS details from the __config.plist__.
+
+### Update
+_Monterey-EFI will no longer be updated._ As of 26th Oct 2022, there is no difference between Ventura-EFI and Monterey-EFI, but as you can guess, this might change in the future. The Monterey 12.6.1 worked perfectly fine on current Monterey-EFI.
 
 ![screenshot.png](https://raw.githubusercontent.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/main/Resources/screenshot.png)
 
@@ -26,8 +30,8 @@ This repository is meant to serve as rough documentation of the steps I followed
 **NOTE:** When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. Replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
 
 # Important
-- This EFI is for **macOS Monterey only**. You have to replace _BlueToolFixup.kext_ with _BrcmBluetoothInjector.kext_ if you want to boot Big Sur.
-- XhciPortLimit is broken in Big Sur 11.3 and above, so you can't boot Big Sur (11.3+) and Monterey without properly configured USBMap.kext. You must properly map your USB ports using an older macOS (Catalina, for example) before you attempt booting Big Sur 11.3+.
+- You have to replace _BlueToolFixup.kext_ with _BrcmBluetoothInjector.kext_ if you want to boot Big Sur.
+- XhciPortLimit is broken in Big Sur 11.3 and above, so you can't boot Big Sur (11.3+), Monterey (and Ventura) without properly configured USBMap.kext. You must properly map your USB ports using an older macOS (Catalina, for example) before you attempt booting Big Sur 11.3+.
 
 # Working
 - Graphics (with QE/CI)
@@ -140,7 +144,7 @@ I can't stress enough how important it is to take note of the hardware and devic
 
 Use [SSDTTime](https://github.com/corpnewt/SSDTTime) to dump your DSDT and SSDTs in Linux (or Windows). Make sure to take a copy of those in an external drive. While you will not use the whole DSDT with OpenCore, you may have to refer to it for manually patching other SSDTs. You will also need a 16GB+ USB flash drive to make the bootable USB installer. I will assume that you already have access to a mac or a Hackintosh machine.
 
-If you plan on installing Monterey or Big Sur 11.3+, make sure that you install a prior version of macOS and create your [USBMap.kext](https://github.com/corpnewt/USBMap). You may try the USBMap.kext available in this repository and place it inside __EFI__ > __OC__ > __Kexts__ folder. Alternatively, if you are still on windows, you may give _[this](https://github.com/USBToolBox/tool)_ a go.
+If you plan on installing Ventura or Monterey or Big Sur 11.3+, make sure that you install a prior version of macOS and create your [USBMap.kext](https://github.com/corpnewt/USBMap). You may try the USBMap.kext available in this repository and place it inside __EFI__ > __OC__ > __Kexts__ folder. Alternatively, if you are still on windows, you may give _[this](https://github.com/USBToolBox/tool)_ a go.
 
 # Installation
 For installation, refer to _[Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/)_. Ideally, you should read the whole guide thoroughly. Once you are done, lots of things make sense.
