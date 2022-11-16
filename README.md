@@ -1,14 +1,14 @@
 # Lenovo Yoga-710-14IKB Hackintosh
-[![macOS](https://img.shields.io/badge/Ventura-13.0%2022A380-FFFF00.svg)](https://www.apple.com/macos) 
+[![macOS](https://img.shields.io/badge/Ventura-13.0.1%2022A400-FFFF00.svg)](https://www.apple.com/macos) 
 [![macOS](https://img.shields.io/badge/Monterey-12.6%2021G115-blue.svg)](https://www.apple.com/macos) 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.5-success.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.6-success.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
 # Disclaimer
 This repository is meant to serve as rough documentation of the steps I followed to turn my Yoga-710-14IKB into a working Hackintosh. The documentation and the files listed here should be used as a reference only. If you choose to use the documentation and/or the files for your personal use, you are allowed to do so on your responsibility. Under no circumstances will I be held responsible for any data loss or bricked device or other disasters that might strike your PC. Also, create your own SMBIOS. I've removed my SMBIOS details from the __config.plist__.
 
 ### Update
-_Monterey-EFI will no longer be updated._ As of 26th Oct 2022, there is no difference between Ventura-EFI and Monterey-EFI, but as you can guess, this might change in the future. The Monterey 12.6.1 worked perfectly fine on current Monterey-EFI.
+_Monterey-EFI will no longer be updated._ The Ventura EFI should keep on working on Monterey systems, but there is no way for me to test.
 
 ![screenshot.png](https://raw.githubusercontent.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/main/Resources/screenshot.png)
 
