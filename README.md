@@ -1,7 +1,7 @@
 # Lenovo Yoga-710-14IKB Hackintosh
-[![macOS](https://img.shields.io/badge/Ventura-13.0.1%2022A400-FFFF00.svg)](https://www.apple.com/macos) 
+[![macOS](https://img.shields.io/badge/Ventura-13.1%2022C65-FFFF00.svg)](https://www.apple.com/macos) 
 [![macOS](https://img.shields.io/badge/Monterey-12.6%2021G115-blue.svg)](https://www.apple.com/macos) 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.7-success.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.8-success.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
 # Disclaimer
@@ -27,9 +27,10 @@ _Monterey-EFI will no longer be updated._ The Ventura EFI should keep on working
 | WLAN & Bluetooth | BCM94352Z - Lenovo China 4352+20702 NGFF  `[0489:e07a]`                                                           |
 | BIOS/UEFI        | 2XCN38WW (V2.12)                                                                                                  |
 
-**NOTE:** When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. Replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
+**NOTE:** My version of Yoga 710 is iGPU only. There is another variant that comes with When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. Replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
 
 # Important
+- I own an iGPU-only variant of Yoga 710. There was another variant that came with discrete Nvidia 940MX GPU which is unsupported by macOS. That GPU must be disabled using one of [_these_](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html) ways for proper functioning of hackintosh.
 - You have to replace _BlueToolFixup.kext_ with _BrcmBluetoothInjector.kext_ if you want to boot Big Sur.
 - XhciPortLimit is broken in Big Sur 11.3 and above, so you can't boot Big Sur (11.3+), Monterey (and Ventura) without properly configured USBMap.kext. You must properly map your USB ports using an older macOS (Catalina, for example) before you attempt booting Big Sur 11.3+.
 
