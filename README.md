@@ -27,7 +27,7 @@ _Monterey-EFI will no longer be updated._ The Ventura EFI should keep on working
 | WLAN & Bluetooth | BCM94352Z - Lenovo China 4352+20702 NGFF  `[0489:e07a]`                                                           |
 | BIOS/UEFI        | 2XCN38WW (V2.12)                                                                                                  |
 
-**NOTE:** My version of Yoga 710 is iGPU only. There is another variant that comes with When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. Replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
+**NOTE:** When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. Replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
 
 # Important
 - I own an iGPU-only variant of Yoga 710. There was another variant that came with discrete Nvidia 940MX GPU which is unsupported by macOS. That GPU must be disabled using one of [_these_](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html) ways for proper functioning of hackintosh.
