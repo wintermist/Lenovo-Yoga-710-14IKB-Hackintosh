@@ -27,10 +27,10 @@ _Monterey-EFI will no longer be updated._ The Ventura EFI should keep on working
 | WLAN & Bluetooth | BCM94352Z - Lenovo China 4352+20702 NGFF  `[0489:e07a]`                                                           |
 | BIOS/UEFI        | 2XCN38WW (V2.12)                                                                                                  |
 
-**NOTE:** When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. Replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
+**NOTE:** When I first got this laptop, I upgraded the RAM from 4GB to 8GB. The included 240GB LITE-ON SSD died within two years, so I replaced it with a Crucial MX500 M.2 SSD. When I first installed High Sierra on this laptop, I swapped the Intel 8260NGW card with a Lenovo branded BCM94352Z. To enjoy basic functionalities, replacement of the WLAN+Bluetooth combo card is probably unnecessary because of successful efforts to support Intel WiFi cards under macOS. All the details of these replaced components are in the above list.
 
 # Important
-- I own an iGPU-only variant of Yoga 710. There was another variant that came with discrete Nvidia 940MX GPU which is unsupported by macOS. That GPU must be disabled using one of [_these_](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html) ways for proper functioning of hackintosh.
+- I own an iGPU-only variant of Yoga 710. There was another variant that came with discrete Nvidia 940MX GPU which is unsupported by macOS. The discrete GPU must be disabled using one of **[_these_](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html)** ways for proper functioning (e.g., sleep, brightness etc.) of hackintosh.
 - You have to replace _BlueToolFixup.kext_ with _BrcmBluetoothInjector.kext_ if you want to boot Big Sur.
 - XhciPortLimit is broken in Big Sur 11.3 and above, so you can't boot Big Sur (11.3+), Monterey (and Ventura) without properly configured USBMap.kext. You must properly map your USB ports using an older macOS (Catalina, for example) before you attempt booting Big Sur 11.3+.
 
@@ -134,10 +134,13 @@ To disable CFG-Lock:
 ## [ECEnabler](https://github.com/1Revenger1/ECEnabler/releases)
 - ECEnabler.kext
 
+## [FeatureUnlock](https://github.com/acidanthera/FeatureUnlock)
+- FeatureUnlock.kext (Unlocks **AirPlay to Mac**. Thanks @[iT0G](https://github.com/iT0G))
+
 ## [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) (Optional)
 - CPUFriend.kext (must be paired with CPUFriendDataProvider.kext)
 
-__Note:__ Don't use CPUFriend.kext during installation.
+__Note:__ Don't use CPUFriend.kext (and CPUFriendDataProvider.kext) during installation.
 
 
 # Preparation
@@ -167,7 +170,7 @@ In OpenCore, some kexts are required to be loaded before some other kext(s) to f
 # Credits
 - [Apple](https://www.apple.com/) for macOS.
 - [Acidanthera team](https://github.com/acidanthera) for OpenCorePkg, VirtualSMC, Lilu, AppleALC, BrcmPatchRAM, VoodooPS2, WhateverGreen, AirportBrcmFixup, VoodooInput, CPUFriend, BrightnessKeys.
-- [VoodooSMBus](https://github.com/VoodooSMBus) for VoodooRMI.
+- [VoodooSMBus](https://github.com/VoodooSMBus) team for VoodooRMI.
 - [0xFireWolf](https://github.com/0xFireWolf) for RealtekCardReader and RealtekCardReaderFriend.
 - [dortania](https://github.com/dortania) for awesome OpenCore Install Guide.
 - [CorpNewt](https://github.com/corpnewt) for USBMap.kext, GenSMBIOS, SSDTTime, MountEFI and ProperTree.
