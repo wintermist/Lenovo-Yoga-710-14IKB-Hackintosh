@@ -1,7 +1,7 @@
 # Lenovo Yoga-710-14IKB Hackintosh
-[![macOS](https://img.shields.io/badge/Ventura-13.1%2022C65-FFFF00.svg)](https://www.apple.com/macos) 
+[![macOS](https://img.shields.io/badge/Ventura-13.3%2022E252-FFFF00.svg)](https://www.apple.com/macos) 
 [![macOS](https://img.shields.io/badge/Monterey-12.6%2021G115-blue.svg)](https://www.apple.com/macos) 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.8-success.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.0-success.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://github.com/wintermist/Lenovo-Yoga-710-14IKB-Hackintosh/blob/main/LICENSE)
 
 # Disclaimer
@@ -169,7 +169,7 @@ In OpenCore, some kexts are required to be loaded before some other kext(s) to f
 
 # Credits
 - [Apple](https://www.apple.com/) for macOS.
-- [Acidanthera team](https://github.com/acidanthera) for OpenCorePkg, VirtualSMC, Lilu, AppleALC, BrcmPatchRAM, VoodooPS2, WhateverGreen, AirportBrcmFixup, VoodooInput, CPUFriend, BrightnessKeys.
+- [Acidanthera team](https://github.com/acidanthera) for OpenCorePkg, VirtualSMC, Lilu, AppleALC, BrcmPatchRAM, VoodooPS2, WhateverGreen, AirportBrcmFixup, VoodooInput, CPUFriend, BrightnessKeys, FeatureUnlock.
 - [VoodooSMBus](https://github.com/VoodooSMBus) team for VoodooRMI.
 - [0xFireWolf](https://github.com/0xFireWolf) for RealtekCardReader and RealtekCardReaderFriend.
 - [dortania](https://github.com/dortania) for awesome OpenCore Install Guide.
